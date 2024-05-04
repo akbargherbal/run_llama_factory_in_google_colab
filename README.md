@@ -1,32 +1,31 @@
-# Running LLaMA-Factory in Google Colab
+# LLaMA-Factory Google Colab Setup
 
-This repository provides scripts to set up and run LLaMA-Factory in Google Colab environment.
+This repository provides scripts and instructions to set up and run LLaMA-Factory within a Google Colab environment.
 
-## Installation and Setup
+## Files
 
-1. **Clone the Repository**: 
-    - Run the following command to clone the repository:
-    ```bash
-    !git clone https://github.com/hiyouga/run_llama_factory_in_google_colab.git
-    ```
+- **01_change_python_version_on_colab.py**: This script checks and updates the Python version to 3.11, sets up virtual environments for both Python 3.10 and 3.11, and installs the necessary venv module.
+- **02_install_llama_factory_in_google_colab.py**: This script installs the required dependencies for LLaMA-Factory and provides instructions for launching the Gradio web UI.
+- **03_local_llama_factory.py**: This script sets environment variables and launches the LLaMA-Factory web UI locally within Colab.
+- **main_script.py**: This is the main script that orchestrates the entire setup process by running the other scripts in sequence. It also activates the virtual environment and installs additional required libraries.
+- **README.md**: This file provides a brief overview of the repository and instructions on running the scripts.
 
-2. **Change Python Version on Colab**:
-    - Run the script `01_change_python_version_on_colab.py` to change the Python version to 3.11.
+## Instructions
 
-3. **Install LLaMA-Factory Dependencies**:
-    - Run the script `02_install_llama_factory_in_google_colab.py` to install LLaMA-Factory dependencies.
-
-4. **Run LLaMA-Factory Locally**:
-    - Execute the script `03_local_llama_factory.py` to run LLaMA-Factory locally.
-
-5. **Accessing LLaMA-Factory**:
-    - After running the script, a GRADIO URL will be generated. Use this URL to access LLaMA-Factory remotely.
+1. Open the `main_script.py` file in Google Colab.
+2. Run the entire script. This will execute the following steps:
+   - Update Python version and set up virtual environments.
+   - Install LLaMA-Factory dependencies.
+   - Activate the virtual environment and install additional libraries.
+   - Launch the LLaMA-Factory web UI locally within Colab.
+3. Once the script finishes, you will receive a Gradio URL. Access this URL to interact with the LLaMA-Factory web UI and utilize its features.
 
 ## Notes
-- Ensure you have a GPU for optimal performance. If not, consider disabling the installation of the `bitsandbytes` library.
-- The installation process may take some time, depending on your system's resources.
 
-## Running the Script
-In Google Colab, run the following command in a notebook cell:
-```python
-!python main_script.py
+- The installation process may take some time depending on your internet connection and the availability of resources.
+- If you do not have a GPU available, you can disable the installation of the `bitsandbytes` library by commenting out the corresponding line in the `main_script.py` file.
+- Ensure you have sufficient disk space available in your Google Colab environment.
+
+## Disclaimer
+
+This repository is provided for educational and experimental purposes only. Please refer to the official LLaMA-Factory documentation for detailed information and support.
